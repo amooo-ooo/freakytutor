@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVE STREAMING</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <video id="remoteVideo" autoplay></video> -->
+    <section>
+        <div class="container">
+            <img src="{{ url_for('video_feed') }}" class="stream" />
+        </div>
+
+        <!-- Add a form for submitting Python code -->
+        <!-- <form action="{{ url_for('execute_python_code') }}" method="post">
+        <textarea name="python_code" rows="10" cols="30"></textarea>
+        <input type="submit" value="Execute Python Code">
+    </form> -->
+
+        <div class="tools">
+            <div class="toolbox">
+                <div id="terminal-button">
+                    <span class="material-symbols-outlined">
+                        keyboard_command_key
+                    </span>
+                    <p>Terminal</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">
+                        joystick
+                    </span>
+                    <p>Control Desktop</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">
+                        web_asset
+                    </span>
+                    <p>Pop-up</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="element-to-show" style="display: none;">
+        <!-- This is the chat panel -->
+        <div id="chat-panel"
+            style="border: 1px solid #ccc; padding: 10px; width: 300px; height: 200px; overflow-y: scroll;">
+            <!-- Messages will be added here -->
+        </div>
+
+        <!-- This is the text input field -->
+        <textarea id="chat-input" style="width: 300px;"></textarea>
+
+        <!-- This is the send button -->
+        <button id="send-button">Send</button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="{{ url_for('static', filename='elements.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+img.stream {
+    max-height: 86vh;
+    max-width: calc(100vw - 2rem);
+    margin: auto;
+}
+
+div.container {
+    background-color: #222222;
+    overflow: auto;
+    height: 86vh;
+    display: flex;
+    margin: 1rem;
+    border-radius: .6rem;
+}
+
+body {
+    display: flex;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+}
+
+div.tools {
+    display: flex;
+    background-color: #26282a;
+    height: calc(100vh - 86vh - 2rem);
+}
+
+div.toolbox {
+    display: flex;
+    margin: auto;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #afaead;
+    height: inherit;
+}
+
+div.toolbox > div:hover {
+    background-color: #1f2022;
+    cursor: pointer;
+}
+
+div.toolbox div {
+    display: flex;
+    flex-direction: column;
+    width: 8rem;
+    height: inherit;
+    gap: .3rem;
+}
+
+div.toolbox p {
+    margin: auto;
+    margin-top: 0;
+    font-size: .8rem;
+    text-align: center;
+}
+
+span {
+    font-weight: 300 !important;
+    font-size: 1.8rem !important;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+
